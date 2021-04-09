@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/_mocha",
-    "eslint": "eslint ./lib --fix"
+    "eslint": "eslint ./lib --fix",
+    "build:stats": "webpack --config ./lib/webpack.prod.js --json > stats.json",
+    "build": "webpack --config ./lib/webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +19,10 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "glob-all": "^3.2.1",
+    "install": "^0.13.0",
     "mocha": "^8.3.2",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "speed-measure-webpack-plugin": "^1.5.0"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
